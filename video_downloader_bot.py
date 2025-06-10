@@ -58,8 +58,7 @@ async def download_video(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     with tempfile.TemporaryDirectory() as tmpdir:
         opts = ydl_opts.copy()
-        opts["outtmpl"] = os.path.join(tmpdir, "%(
-id)s.%(ext)s")
+        opts["outtmpl"] = os.path.join(tmpdir, "%(id)s.%(ext)s")
         try:
             with YoutubeDL(opts) as ydl:
                 info = ydl.extract_info(url, download=True)
