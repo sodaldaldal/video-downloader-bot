@@ -1,15 +1,23 @@
 # Video Downloader Bot
 
-This Telegram bot downloads videos from supported services using yt-dlp.
+Telegram bot for downloading videos from various services using yt-dlp.
 
 ## Setup
 
-1. Ensure the environment variable `TELEGRAM_BOT_TOKEN` is set with your bot token.
-2. Install dependencies:
+1. Replace your bot token environment variable:
+   ```bash
+   export TELEGRAM_BOT_TOKEN="YOUR_BOT_TOKEN"
+   ```
+2. (Optional) If you need YouTube authentication, export cookies:
+   ```bash
+   python3 dump_cookies.py
+   export YT_COOKIES_FILE="cookies.txt"
+   ```
+3. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-3. Run the bot:
+4. Run the bot:
    ```bash
    python video_downloader_bot.py
    ```
